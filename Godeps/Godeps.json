@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/tadast/heroku-pinger",
+	"GoVersion": "go1.3.2",
+	"Deps": []
+}
