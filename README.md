@@ -8,7 +8,7 @@ Pings URLs every 30mins
 git clone git@github.com:tadast/pinggun.git
 cd pinggun
 go get
-PORT=5000 TARGETS="http://localhost:5000,http://example.com" heroku-pinger
+PORT=5000 TARGETS="http://localhost:5000,http://example.com" pinggun
 ```
 
 ## Deploying on Heroku

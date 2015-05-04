@@ -1,1 +1,1 @@
-web: heroku-pinger
+web: pinggun
