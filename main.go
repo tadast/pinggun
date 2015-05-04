@@ -6,6 +6,7 @@ import (
   "net/http"
   "os"
   "time"
+  "strings"
 )
 
 func main() {
@@ -30,11 +31,18 @@ func main() {
   }
 }
 
-
 func webFunc(res http.ResponseWriter, req *http.Request) {
   fmt.Fprintln(res, "Pingin' them all")
 }
 
 func pinger() error {
+  urls := strings.Split(os.Getenv("TARGETS"), ",")
+  for _, url := range urls {
+    log.Printf("Pinging %v\n", url)
+    _, err := http.Get(url)
+    if err != nil {
+      log.Printf("Can't ping %v, %v\n", url, err)
+    }
+  }
   return nil;
 }
